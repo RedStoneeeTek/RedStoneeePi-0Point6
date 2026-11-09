@@ -157,3 +157,11 @@ You can flash the image to an SD card with `dd`, `balenaEtcher` and so on;
 or flash the image to the eMMC with `rkdeveloptool`, `upgrade_tool` and so on.
 
 The default user is `name`, and the password is `233`.
+
+## Hardware Design Files
+
+The PCB is designed with LCEDA/EasyEDA v3.2,
+the [project file](hardware/EDA%20Project.epro2)
+and [schematic PDF](hardware/Schematic.pdf) are included in the repository.
+
+You can also view the project on [OSHWHub](https://oshwhub.com/dc_redstone/project_pumgrlpb).
