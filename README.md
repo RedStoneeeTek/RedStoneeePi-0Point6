@@ -2,7 +2,7 @@
 
 A single-board computer based on RK3566
 
-[Chinese version - OSHW Hub](https://oshwhub.com/dc_redstone/project_pumgrlpb)
+[中文版 - OSHWHub](https://oshwhub.com/dc_redstone/project_pumgrlpb)
 
 ![Board](imgs/board.jpg)
 ![System Info](imgs/sys_info.jpg)
@@ -24,7 +24,7 @@ A single-board computer based on RK3566
 * Dual-band WiFi and BT
 * On-board Microphone
 
-## Hardware Guide
+## Hardware Information
 
 ### Power Supply
 
@@ -85,13 +85,6 @@ The default module is the AP6256, which supports dual-band Wi-Fi.
 If you use another module, you need to replace the corresponding crystal oscillator.
 The module must also support SDIO 3.0 because its I/O supply voltage is 1.8 V.
 
-> [!NOTE] 
-> Many second-hand RK3566 chips sold online are locked,
-> so be careful when purchasing!
-> 
-> A locked chip will appear to hang
-> when downloading a regular SPL loader in MaskROM mode.
-
 ### DSI and HDMI
 
 The RK3566 has only one VOP and does not support displaying
@@ -103,6 +96,13 @@ In my testing, the DSI screen had a relatively high resolution,
 and the HDMI output became corrupted when DSI was enabled.
 
 If you do not use DSI, disable or remove the relevant device-tree nodes.
+
+> [!NOTE] 
+> Many second-hand RK3566 chips sold online are locked,
+> so be careful when purchasing!
+> 
+> A locked chip will appear to hang
+> when downloading a regular SPL loader in MaskROM mode.
 
 ## Building Linux
 
