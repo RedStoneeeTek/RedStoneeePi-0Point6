@@ -56,7 +56,9 @@ I could not find a reference design for RK3566 + LPDDR3,
 so I designed this part myself.
 It has been tested and is fairly stable at 920 MHz.
 
-The [SPL](rk3566_lpddr3_920_spl_loader_v1.25.114.bin) and [U-Boot](u-boot.itb) images are included in the repository,
+The [SPL](rk3566_lpddr3_920_spl_loader_v1.25.114.bin),
+[IDB loader](idbloader.img) and [U-Boot](u-boot.itb)
+images are included in the repository,
 and you can use them to make your own system image.
 
 ### Ethernet
@@ -82,10 +84,16 @@ use the same design, so it should work.
 ### WiFi/BT
 
 The default module is the AP6256, which supports dual-band Wi-Fi.
-If you use another module, you need to replace the corresponding crystal oscillator.
+If you use another module,
+you need to replace the corresponding crystal oscillator.
 The module must also support SDIO 3.0 because its I/O supply voltage is 1.8 V.
 
 ### DSI and HDMI
+
+The DSI has been tested with TL060FVXS07,
+both displaying and touchscreen are working properly.
+To use this screen, you need to add the touchscreen and backlight drivers,
+see [this repo](https://github.com/JackHuang021/mipi_hub).
 
 The RK3566 has only one VOP and does not support displaying
 different content on multiple screens.
